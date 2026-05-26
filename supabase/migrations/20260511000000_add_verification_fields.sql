@@ -1,0 +1,1 @@
+ALTER TABLE exchange_requests ADD COLUMN IF NOT EXISTS verification_status TEXT; ALTER TABLE exchange_requests ADD COLUMN IF NOT EXISTS verification_hash TEXT;
