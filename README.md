@@ -13,7 +13,6 @@ Train Companion Hub is a secure, AI-powered platform for verifying IRCTC train t
 
 ## 📸 Screenshots
 
-*(Replace the placeholder images below with your actual screenshots)*
 
 ### 1. User Dashboard
 ![Dashboard](screenshots/dashboard_v3.png)
