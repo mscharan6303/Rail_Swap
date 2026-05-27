@@ -16,19 +16,19 @@ Train Companion Hub is a secure, AI-powered platform for verifying IRCTC train t
 *(Replace the placeholder images below with your actual screenshots)*
 
 ### 1. User Dashboard
-![Dashboard](screenshots/dashboard_v2.png)
+![Dashboard](screenshots/dashboard_v3.png)
 *The main dashboard where users can view their current verified tickets and explore available seat swap requests.*
 
 ### 2. Ticket Upload and Verification
-![Ticket Upload](screenshots/upload_verification_v2.png)
+![Ticket Upload](screenshots/upload_verification_v3.png)
 *Users upload their IRCTC ticket (PDF/Image) which is instantly scanned using OCR to extract the train details securely.*
 
 ### 3. Swap Request Details
-![Swap Details](screenshots/swap_details_v2.png)
+![Swap Details](screenshots/swap_details_v3.png)
 *Detailed view of a seat swap request, showing exact coach, seat numbers, and journey timestamps.*
 
 ### 4. Real-time Chat Interface
-![Live Chat](screenshots/realtime_chat_v2.png)
+![Live Chat](screenshots/realtime_chat_v3.png)
 *Passengers can securely chat in real-time to coordinate the seat swap before boarding the train.*
 
 ---
