@@ -78,11 +78,11 @@ The application will usually be available at `http://localhost:5173`.
 3. This opens a real-time chat interface where you can communicate with the other passenger to confirm the swap.
 
 ## Tech Stack
-- **Frontend Framework**: [React 19](https://react.dev/) with [Vite](https://vitejs.dev/) & [TanStack Start](https://tanstack.com/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Lucide React](https://lucide.dev/) (Icons)
-- **Backend/Database/Real-time**: [Supabase](https://supabase.com/)
-- **OCR/Verification**: [Tesseract.js](https://tesseract.projectnaptha.com/) & [PDF.js](https://mozilla.github.io/pdf.js/)
+- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), and [TanStack Start](https://tanstack.com/) (Full-stack framework)
+- **Backend Runtime**: [Node.js](https://nodejs.org/) (for Server-Side Rendering and API routes)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & [Radix UI](https://www.radix-ui.com/)
+- **Database & Real-time**: [Supabase](https://supabase.com/) (PostgreSQL, Auth, Real-time WebSockets)
+- **OCR Processing**: [Tesseract.js](https://tesseract.projectnaptha.com/) (Optical Character Recognition) & [PDF.js](https://mozilla.github.io/pdf.js/)
 
 ## Contributing
 Feel free to submit issues or pull requests to improve the platform.
