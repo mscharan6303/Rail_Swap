@@ -1,0 +1,14 @@
+{
+  "name": "RailSwap — Train Seat Exchange",
+  "short_name": "RailSwap",
+  "description": "Swap Indian train seats safely with verified passengers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#1a2742",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
