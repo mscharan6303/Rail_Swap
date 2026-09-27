@@ -1,5 +1,10 @@
 # 🚆 RailSwap — Train Seat Swap & Passenger Companion Hub
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-rail--swap.vercel.app-brightgreen?style=for-the-badge&logo=vercel)](https://rail-swap.vercel.app/)
+
+**Live Application URL**: [https://rail-swap.vercel.app/](https://rail-swap.vercel.app/)  
+**GitHub Repository**: [https://github.com/mscharan6303/Rail_Swap](https://github.com/mscharan6303/Rail_Swap)
+
 RailSwap is an AI-powered, full-stack web application designed for train travelers across Indian Railways. It allows passengers to verify IRCTC tickets automatically via OCR/PDF parsing or live 10-digit PNR fetching, post confirmed seat swap requests, and coordinate seat exchanges via real-time chat.
 
 ---

@@ -1,90 +1,66 @@
-# Train Companion Hub - Rail Seat Swap
+# 🚆 RailSwap — Train Companion & Seat Swap Hub
 
-Train Companion Hub is a secure, AI-powered platform for verifying IRCTC train tickets and facilitating authorized, confirmed-ticket seat swaps between travelers. It provides a reliable way for passengers to request and exchange seats while ensuring all ticket data is verified through automated OCR (Optical Character Recognition).
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-rail--swap.vercel.app-brightgreen?style=for-the-badge&logo=vercel)](https://rail-swap.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/mscharan6303/Rail_Swap)
 
-## Key Features
-- **OCR-Based Ticket Verification**: Upload your IRCTC ticket (PDF or image) and the system automatically extracts crucial journey details like PNR, Train Number, Boarding Station, Destination, Departure/Arrival times, Coach, and Seat numbers.
-- **Confirmed Tickets Only**: Strict validation ensures that only confirmed (CNF) tickets for upcoming journeys are eligible for seat swapping.
-- **Real-Time Communication**: Seamless chat interface built with Supabase for real-time message synchronization between passengers negotiating a swap.
-- **Journey Data Integrity**: Verified ticket details cannot be tampered with manually, ensuring trust and security for all users.
-- **Modern User Interface**: Built using modern web technologies to provide a smooth, fast, and responsive user experience across devices.
+**Live Application URL**: [https://rail-swap.vercel.app/](https://rail-swap.vercel.app/)
+
+RailSwap is a secure, AI-powered platform for verifying IRCTC train tickets (via OCR image/PDF parsing and live 10-digit PNR API fetching) and facilitating confirmed-ticket seat swaps between travelers on Indian Railways in real time.
+
+---
+
+## 🌟 Key Features
+- 🎟️ **OCR & PDF Ticket Parsing**: Upload your IRCTC ticket (PDF or image) to automatically extract PNR, Train Number, Boarding/Destination stations, Coach, Seat, Berth, and timings.
+- 📡 **Live RailRadar PNR Status API**: Lookup any 10-digit PNR to retrieve live journey details and confirm ticket status automatically.
+- 🔐 **Direct Database Authentication**: Fast user registration and login saving credentials directly into Supabase database `profiles` for instant access without email verification loops.
+- 💬 **Real-Time Passenger Chat**: WebSockets messaging powered by Supabase for real-time negotiation between passengers swapping seats.
+- 🎯 **Confirmed Tickets Only**: Strict validation ensures that only confirmed (CNF) upcoming journeys are eligible for seat swapping.
 
 ---
 
 ## 📸 Screenshots
 
-
 ### 1. User Dashboard
 ![Dashboard](screenshots/dashboard_v3.png)
-*The main dashboard where users can view their current verified tickets and explore available seat swap requests.*
+*The main dashboard where users can view their verified tickets and explore available seat swap requests.*
 
-### 2. Ticket Upload and Verification
+### 2. Ticket Upload & Verification
 ![Ticket Upload](screenshots/upload_verification_v3.png)
-*Users upload their IRCTC ticket (PDF/Image) which is instantly scanned using OCR to extract the train details securely.*
+*Users upload their IRCTC ticket (PDF/Image) or fetch live PNR details.*
 
 ### 3. Swap Request Details
 ![Swap Details](screenshots/swap_details_v3.png)
-*Detailed view of a seat swap request, showing exact coach, seat numbers, and journey timestamps.*
+*Detailed view of a seat swap request displaying coach, seat numbers, journey date, and route.*
 
-### 4. Real-time Chat Interface
+### 4. Real-Time Chat Interface
 ![Live Chat](screenshots/realtime_chat_v3.png)
-*Passengers can securely chat in real-time to coordinate the seat swap before boarding the train.*
+*Passengers securely chat in real-time to coordinate seat swaps prior to boarding.*
 
 ---
 
-## 🚀 How to Use the Project
+## 🚀 Live Demo & How to Run
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine. This project also uses [Supabase](https://supabase.com/) for database and real-time features.
+- **Live URL**: [https://rail-swap.vercel.app/](https://rail-swap.vercel.app/)
+- **GitHub Repository**: [https://github.com/mscharan6303/Rail_Swap](https://github.com/mscharan6303/Rail_Swap)
 
-### Step 1: Clone and Install Dependencies
-Open your terminal and navigate to the project directory:
+### Local Setup
 ```bash
-cd train-companion-hub-main
+git clone https://github.com/mscharan6303/Rail_Swap.git
+cd Rail_Swap
 npm install
-# or if you use bun
-bun install
-```
-
-### Step 2: Configure Environment Variables
-You need to set up your environment variables for Supabase and any other required services.
-1. Copy the `.env.example` file (if available) to `.env`.
-2. Add your `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to the `.env` file.
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-### Step 3: Run the Development Server
-Start the Vite development server by running:
-```bash
 npm run dev
-# or
-bun run dev
 ```
-The application will usually be available at `http://localhost:5173`.
 
-### Step 4: Verifying a Ticket
-1. Navigate to the **Scan/Upload Ticket** section.
-2. Upload a clear image or PDF of your IRCTC e-ticket.
-3. Wait for the OCR system to parse your ticket details. It will automatically extract your Coach, Seat Number, Boarding/Destination stations, and timings.
-4. If the ticket is valid and Confirmed (CNF), it will be added to your verified journeys.
+---
 
-### Step 5: Initiating a Seat Swap
-1. Once your ticket is verified, you can browse available swap requests on the same train.
-2. If you find a suitable match (e.g., you want a Lower Berth and someone else wants an Upper Berth), you can click **Request Swap**.
-3. This opens a real-time chat interface where you can communicate with the other passenger to confirm the swap.
+## 🛠️ Tech Stack
+- **Frontend**: React 19, TypeScript, TanStack Router & Start, Tailwind CSS v4, Radix UI
+- **Backend & Database**: Supabase PostgreSQL, WebSockets Realtime
+- **API Services**: RailRadar PNR Status API
+- **OCR Engine**: Tesseract.js & PDF.js
+- **Deployment**: Vercel
 
-## Tech Stack
-- **Frontend**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), and [TanStack Start](https://tanstack.com/) (Full-stack framework)
-- **Backend Runtime**: [Node.js](https://nodejs.org/) (for Server-Side Rendering and API routes)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & [Radix UI](https://www.radix-ui.com/)
-- **Database & Real-time**: [Supabase](https://supabase.com/) (PostgreSQL, Auth, Real-time WebSockets)
-- **OCR Processing**: [Tesseract.js](https://tesseract.projectnaptha.com/) (Optical Character Recognition) & [PDF.js](https://mozilla.github.io/pdf.js/)
+---
 
-## Contributing
-Feel free to submit issues or pull requests to improve the platform.
-
-## License
+## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
